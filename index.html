@@ -1414,6 +1414,25 @@
             line-height: 1.45
         }
 
+.challenge-detail {
+    display: none;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(200, 132, 58, 0.22);
+}
+
+.challenge-card.active .challenge-detail {
+    display: block;
+}
+
+.challenge-detail .task {
+    font-size: 13px;
+    color: var(--amber);
+    font-weight: 700;
+    line-height: 1.55;
+    margin: 0;
+}
+
         /* ── QUICK RECAP ────────────────────────────────────── */
         .quick-recap {
             background: var(--navy);
@@ -2266,28 +2285,6 @@
             flex-direction: column;
             align-items: center;
             gap: 12px
-        }
-
-        /* Challenge example box */
-        .challenge-example {
-            background: var(--bg);
-            border-radius: var(--radius-sm);
-            padding: 14px 16px
-        }
-
-        .challenge-example p {
-            font-size: 13px;
-            color: var(--muted);
-            margin-bottom: 4px
-        }
-
-        .challenge-example p:last-child {
-            margin-bottom: 0
-        }
-
-        .challenge-example .task {
-            color: var(--teal);
-            font-weight: 600
         }
 
         /* ── STUDY TOOLS ────────────────────────────────────────── */
@@ -4406,141 +4403,132 @@
             </div>
         </div>
 
-        <!-- PAGE 15 ─ LIVE PRESSURE CHALLENGE BANK ───────────────────────── -->
-        <div class="page" id="page-15">
-            <div class="page-eyebrow">Practice</div>
-            <h1 class="page-title">Live Pressure Challenge Bank</h1>
-            <p class="page-subtitle">Once the recovery move is clear, try the same task with one extra difficulty. Add
-                one challenge at a time.</p>
-            <div class="challenge-grid mt-8">
+ <!-- PAGE 15 ─ LIVE PRESSURE CHALLENGE BANK ───────────────────────── -->
+<div class="page" id="page-15">
+    <div class="page-eyebrow amber">Practice Upgrade</div>
+    <h1 class="page-title">Live Pressure Challenge Bank</h1>
+    <p class="page-subtitle">Once the response structure is clear, try the same prompt with one extra difficulty. Add one challenge at a time.</p>
+    <p class="tap-hint">Tap any card to expand it.</p>
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
-                            <use href="#icon-bulb" />
-                        </svg></div>
-                    <div class="challenge-title">Fast Question</div>
-                    <div class="challenge-quote">The listener expects an immediate answer.</div>
-                    <div class="challenge-example" style="display:none;margin-top:12px">
-                        <p><strong class="task">Challenge:</strong> Pause before answering even when the situation feels
-                            urgent.</p>
-                    </div>
-                </div>
+    <div class="challenge-grid mt-8">
 
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
-                            <use href="#icon-bulb" />
-                        </svg></div>
-                    <div class="challenge-title">Impatient Listener</div>
-                    <div class="challenge-quote">The listener sounds like they want a shorter response.</div>
-                    <div class="challenge-example" style="display:none;margin-top:12px">
-                        <p><strong class="task">Challenge:</strong> Simplify the answer without losing the main point.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
-                            <use href="#icon-bulb" />
-                        </svg></div>
-                    <div class="challenge-title">Interruption</div>
-                    <div class="challenge-quote">The listener interrupts before you finish.</div>
-                    <div class="challenge-example" style="display:none;margin-top:12px">
-                        <p><strong class="task">Challenge:</strong> Respond briefly, then reset and return to the main
-                            point.</p>
-                    </div>
-                </div>
-
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
-                            <use href="#icon-bulb" />
-                        </svg></div>
-                    <div class="challenge-title">Vague Question</div>
-                    <div class="challenge-quote">The question is broad and unclear.</div>
-                    <div class="challenge-example" style="display:none;margin-top:12px">
-                        <p><strong class="task">Challenge:</strong> Clarify or anchor before answering so the response
-                            has direction.</p>
-                    </div>
-                </div>
-
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
-                            <use href="#icon-bulb" />
-                        </svg></div>
-                    <div class="challenge-title">Missing Information</div>
-                    <div class="challenge-quote">You do not know the exact answer.</div>
-                    <div class="challenge-example" style="display:none;margin-top:12px">
-                        <p><strong class="task">Challenge:</strong> Separate what you know from what you need to
-                            confirm. Avoid guessing.</p>
-                    </div>
-                </div>
-
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
-                            <use href="#icon-bulb" />
-                        </svg></div>
-                    <div class="challenge-title">Sentence Collapse</div>
-                    <div class="challenge-quote">You lose your sentence halfway through.</div>
-                    <div class="challenge-example" style="display:none;margin-top:12px">
-                        <p><strong class="task">Challenge:</strong> Continue if the idea is still usable. Restart
-                            cleanly if the structure is broken.</p>
-                    </div>
-                </div>
-
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
-                            <use href="#icon-bulb" />
-                        </svg></div>
-                    <div class="challenge-title">Skeptical Tone</div>
-                    <div class="challenge-quote">The listener challenges your point.</div>
-                    <div class="challenge-example" style="display:none;margin-top:12px">
-                        <p><strong class="task">Challenge:</strong> Acknowledge the challenge without becoming
-                            defensive.</p>
-                    </div>
-                </div>
-
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
-                            <use href="#icon-bulb" />
-                        </svg></div>
-                    <div class="challenge-title">Short Version</div>
-                    <div class="challenge-quote">You have 30 seconds to answer. The goal is priority, not speed.</div>
-                    <div class="challenge-example" style="display:none;margin-top:12px">
-                        <p><strong class="task">Challenge:</strong> Use a pause, one main point, one reason, and a
-                            reset.</p>
-                    </div>
-                </div>
-
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
-                            <use href="#icon-bulb" />
-                        </svg></div>
-                    <div class="challenge-title">Return to Point</div>
-                    <div class="challenge-quote">After answering, you must return to the original message.</div>
-                    <div class="challenge-example" style="display:none;margin-top:12px">
-                        <p><strong class="task">Challenge:</strong> Use reset language to bring the conversation back
-                            clearly.</p>
-                    </div>
-                </div>
-
-                <div class="challenge-card" onclick="this.classList.toggle('active')">
-                    <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
-                            <use href="#icon-bulb" />
-                        </svg></div>
-                    <div class="challenge-title">No Preparation</div>
-                    <div class="challenge-quote">You hear the question for the first time live.</div>
-                    <div class="challenge-example" style="display:none;margin-top:12px">
-                        <p><strong class="task">Challenge:</strong> Pause, anchor, and give one clear main point without
-                            preparation.</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="optional-q mt-20">
-                <div class="optional-q-label">Rule</div>
-                <div class="optional-q-text">Add one challenge at a time. The goal is not perfect fluency. The goal is
-                    recovery.</div>
+        <div class="challenge-card" onclick="toggleChallengeCard(this)">
+            <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
+                    <use href="#icon-bulb" />
+                </svg></div>
+            <div class="challenge-title">Fast Question</div>
+            <div class="challenge-quote">The listener expects an immediate answer.</div>
+            <div class="challenge-detail">
+                <p class="task">Pause before answering even when the situation feels urgent.</p>
             </div>
         </div>
+
+        <div class="challenge-card" onclick="toggleChallengeCard(this)">
+            <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
+                    <use href="#icon-bulb" />
+                </svg></div>
+            <div class="challenge-title">Impatient Listener</div>
+            <div class="challenge-quote">The listener sounds like they want a shorter response.</div>
+            <div class="challenge-detail">
+                <p class="task">Simplify the answer without losing the main point.</p>
+            </div>
+        </div>
+
+        <div class="challenge-card" onclick="toggleChallengeCard(this)">
+            <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
+                    <use href="#icon-bulb" />
+                </svg></div>
+            <div class="challenge-title">Interruption</div>
+            <div class="challenge-quote">The listener interrupts before you finish.</div>
+            <div class="challenge-detail">
+                <p class="task">Respond briefly, then reset and return to the main point.</p>
+            </div>
+        </div>
+
+        <div class="challenge-card" onclick="toggleChallengeCard(this)">
+            <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
+                    <use href="#icon-bulb" />
+                </svg></div>
+            <div class="challenge-title">Vague Question</div>
+            <div class="challenge-quote">The question is broad and unclear.</div>
+            <div class="challenge-detail">
+                <p class="task">Clarify or anchor before answering so the response has direction.</p>
+            </div>
+        </div>
+
+        <div class="challenge-card" onclick="toggleChallengeCard(this)">
+            <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
+                    <use href="#icon-bulb" />
+                </svg></div>
+            <div class="challenge-title">Missing Information</div>
+            <div class="challenge-quote">You do not know the exact answer.</div>
+            <div class="challenge-detail">
+                <p class="task">Separate what you know from what you need to confirm. Avoid guessing.</p>
+            </div>
+        </div>
+
+        <div class="challenge-card" onclick="toggleChallengeCard(this)">
+            <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
+                    <use href="#icon-bulb" />
+                </svg></div>
+            <div class="challenge-title">Sentence Collapse</div>
+            <div class="challenge-quote">You lose your sentence halfway through.</div>
+            <div class="challenge-detail">
+                <p class="task">Continue if the idea is still usable. Restart cleanly if the structure is broken.</p>
+            </div>
+        </div>
+
+        <div class="challenge-card" onclick="toggleChallengeCard(this)">
+            <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
+                    <use href="#icon-bulb" />
+                </svg></div>
+            <div class="challenge-title">Skeptical Tone</div>
+            <div class="challenge-quote">The listener challenges your point.</div>
+            <div class="challenge-detail">
+                <p class="task">Acknowledge the challenge without becoming defensive.</p>
+            </div>
+        </div>
+
+        <div class="challenge-card" onclick="toggleChallengeCard(this)">
+            <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
+                    <use href="#icon-bulb" />
+                </svg></div>
+            <div class="challenge-title">Short Version</div>
+            <div class="challenge-quote">You have 30 seconds to answer. The goal is priority, not speed.</div>
+            <div class="challenge-detail">
+                <p class="task">Use a pause, one main point, one reason, and a reset.</p>
+            </div>
+        </div>
+
+        <div class="challenge-card" onclick="toggleChallengeCard(this)">
+            <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
+                    <use href="#icon-bulb" />
+                </svg></div>
+            <div class="challenge-title">Return to Point</div>
+            <div class="challenge-quote">After answering, you must return to the original message.</div>
+            <div class="challenge-detail">
+                <p class="task">Use reset language to bring the conversation back clearly.</p>
+            </div>
+        </div>
+
+        <div class="challenge-card" onclick="toggleChallengeCard(this)">
+            <div class="challenge-icon"><svg width="16" height="16" style="color:var(--amber)">
+                    <use href="#icon-bulb" />
+                </svg></div>
+            <div class="challenge-title">No Preparation</div>
+            <div class="challenge-quote">You hear the question for the first time live.</div>
+            <div class="challenge-detail">
+                <p class="task">Pause, anchor, and give one clear main point without preparation.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card mt-20">
+        <div class="section-label mb-8">How to use these</div>
+        <p style="font-size:14px;color:var(--muted);line-height:1.65">Choose one prompt from the Practice Prompts page and one challenge from this page. Practise using one skill or the full framework. Add one challenge at a time. The goal is not to sound perfect. The goal is to stay calm, clear, useful, and professional when the conversation becomes more realistic.</p>
+    </div>
+</div>
 
         <!-- PAGE 16 ─ WHAT GOOD LOOKS LIKE ─────────────────────────── -->
         <div class="page" id="page-16">
@@ -5371,14 +5359,21 @@
             toggle.classList.toggle('open');
         }
 
-        document.addEventListener('click', function (e) {
-            const card = e.target.closest('.challenge-card');
-            if (!card) return;
-            const example = card.querySelector('.challenge-example');
-            if (example) {
-                example.style.display = card.classList.contains('active') ? 'block' : 'none';
-            }
-        });
+        function toggleChallengeCard(card) {
+    card.classList.toggle('active');
+}
+
+function toggleChallengeCard(card) {
+    const wasActive = card.classList.contains('active');
+
+    document.querySelectorAll('.challenge-card').forEach(function (c) {
+        c.classList.remove('active');
+    });
+
+    if (!wasActive) {
+        card.classList.add('active');
+    }
+}
 
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') closeJump();
